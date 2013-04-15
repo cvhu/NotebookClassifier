@@ -1,0 +1,83 @@
+\documentclass[11pt]{article}
+
+\usepackage{mathptmx,helvet,courier,bm}
+\usepackage{amsmath,amssymb,stmaryrd}
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{fullpage}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+\setcounter{bottomnumber}{2}
+
+% Personal commands
+%
+\newcommand{\equationname}{equation}
+
+% Demarcate figures
+\newcommand{\topfigrule}{\relax\noindent\rule[-6pt]{\columnwidth}{.4pt}}
+\newcommand{\botfigrule}{\relax\noindent\rule[16pt]{\columnwidth}{.4pt}}
+
+%
+% A more standardized way of making paper titles
+%
+
+
+\author{Chinwei Hu \footnote{vic@cvhu.org}
+}
+\title{\large{Evernote Coding Challenge} \\ \huge{Notebook Classifier}}
+
+%\lhead{CS388 Natural Language Processing}
+\begin{document}
+\sloppy
+
+\maketitle
+%\section{}
+%\subsection{}
+
+
+\section{Introduction}
+
+This report is designated to the interview process for the machine learning internship position at Evernote, quoting the original assignment description:
+\begin{quotation}
+Implement a Java or Python application using the Evernote service API:
+
+\begin{verbatim}
+http://dev.evernote.com/documentation/cloud/
+\end{verbatim}
+
+The program should download all the notes and note meta data from the entire account. Using all the information in the account the application should:
+
+\begin{enumerate}
+\item Provide the names of the five most recently updated notes
+\item Provide recommendations for which notebooks the notes should be placed based on the most recent 5 note's similarity to other notes in the account.
+
+\end{enumerate}
+
+
+Use the algorithm you'd find most effective for determining how to classify notes by notebook. Source code should be provided. You are welcome to use 3rd party tools provided that the application can be executed solely via the command line using something like:
+
+\begin{verbatim}
+(if Python)
+python classifyNotes.py 
+\end{verbatim}
+
+Background: The goal of the feature is to intelligently recommend which notebooks to place the 5 most recent notes based on how users have filed the other notes in their account. It should be a standard classification problem using the existing notes in the account as a training set then apply the model against the 5 most recent notes notes.
+\end{quotation}
+
+
+\section{Method}
+\subsection{NoteClassifier1.java}
+
+
+\begin{thebibliography}{1}
+
+\bibitem{Robertson2004}
+Robertson, Stephen. "Understanding inverse document frequency: on theoretical arguments for IDF." Journal of documentation 60.5 (2004): 503-520.
+
+\end{thebibliography}
+
+
+\end{document}  
